@@ -20,7 +20,7 @@
             :class="mail.read ? 'mail--read' : ''"
             v-for="mail in mailsList"
             :key="mail.id"
-            @click="openMail(mail.id)"
+            @click="openMail($event, mail.id)"
         >
             <div class="mail__action">
                 <input
@@ -54,7 +54,10 @@ export default {
         ...mapStores(useGeneralStore)
     },
     methods: {
-        openMail(id) {
+        openMail(event, id) {
+            if (event.target.classList.contains('selector')) {
+                return
+            }
             this.generalStore.openMailModal(id)
         },
         watchMails() {
