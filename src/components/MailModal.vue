@@ -1,5 +1,5 @@
 <template>
-    <section class="current-mail" v-if="mailData" @click="closeMail">
+    <section class="current-mail" v-if="mailData">
         <div class="btn btn-close" @click="closeMail">Close</div>
         <div class="actions">
             <button class="btn">Mark as read (r)</button>

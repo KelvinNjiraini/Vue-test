@@ -36,6 +36,6 @@ export const useGeneralStore = defineStore('general', {
             mail.isRead = true
             this.currentMail = mail
         }
-    }
-    // persist: true
+    },
+    persist: true
 })
