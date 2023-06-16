@@ -1,0 +1,41 @@
+@import './base.css';
+
+.container {
+    padding: 5rem 4rem;
+}
+
+.heading--secondary {
+    font-size: 2.1rem;
+}
+
+.heading--main {
+    font-weight: bold;
+}
+
+.actions {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:not(:last-child) {
+    margin: 0 2rem;
+}
+
+.btn-close {
+    /* text-decoration: none; */
+    font-size: 1.3rem;
+    color: var(--color-black);
+}
+
+input.selector {
+    transform: scale(1.8);
+    cursor: pointer;
+}
