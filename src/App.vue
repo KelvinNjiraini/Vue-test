@@ -1,6 +1,6 @@
 <template>
     <section class="main">
-        <mail-modal v-show="currentModalPresent" />
+        <mail-modal v-if="currentModalPresent" />
         <div class="main__nav">
             <side-bar />
         </div>
