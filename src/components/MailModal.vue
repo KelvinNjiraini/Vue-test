@@ -1,6 +1,6 @@
 <template>
-    <section class="current-mail" v-if="mailData">
-        <a href="#" role="button" class="btn-close" @click.prevent="closeMail">Close</a>
+    <section class="current-mail" v-if="mailData" @click="closeMail">
+        <div class="btn btn-close" @click="closeMail">Close</div>
         <div class="actions">
             <button class="btn">Mark as read (r)</button>
             <button class="btn">Archive(a)</button>
@@ -53,22 +53,10 @@ export default {
     z-index: 100;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    padding: 0;
+    padding: 2rem;
     margin: 0;
     overflow: hidden;
     background-color: white;
-
-    &::after {
-        content: '';
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        // background-color: rgba(0, 0, 0, 0.75);
-        z-index: 10;
-    }
 
     &__title {
         margin-bottom: 2rem;
