@@ -17,7 +17,7 @@
         </div>
         <div
             class="mail"
-            :class="mail.read ? 'mail--read' : ''"
+            :class="mail.isRead ? 'mail--read' : ''"
             v-for="mail in mailsList"
             :key="mail.id"
             @click="openMail($event, mail.id)"

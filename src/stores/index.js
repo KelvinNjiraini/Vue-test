@@ -37,5 +37,10 @@ export const useGeneralStore = defineStore('general', {
             this.currentMail = mail
         }
     },
+    getters: {
+        numOfMails: (state) => {
+            return state.mails.length
+        }
+    },
     persist: true
 })

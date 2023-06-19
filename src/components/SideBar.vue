@@ -1,13 +1,25 @@
 <template>
     <div class="navbar">
         <!-- two links -->
-        <router-link class="navbar__link" to="/inbox">Inbox(2)</router-link>
+        <router-link class="navbar__link" to="/inbox">Inbox({{ numOfMails }})</router-link>
         <router-link class="navbar__link" to="/archive">Archive(0)</router-link>
 
         <!-- logout btn -->
         <a href="#" role="button" class="navbar__link">Logout</a>
     </div>
 </template>
+<script>
+import { mapStores } from 'pinia'
+import { useGeneralStore } from './../stores/index'
+export default {
+    computed: {
+        ...mapStores(useGeneralStore),
+        numOfMails() {
+            return this.generalStore.numOfMails
+        }
+    }
+}
+</script>
 <style lang="scss" scoped>
 $colorBlack: var(--color-black);
 .navbar {
