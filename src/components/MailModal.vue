@@ -2,8 +2,8 @@
     <teleport to="body">
         <section class="mail-modal">
             <div class="mail-modal__backdrop" v-if="mailData" @click="closeMail"></div>
-            <transition name="dialog">
-                <dialog class="mail-modal__dialog" v-if="mailData" open>
+            <transition name="dialog" appear>
+                <dialog class="mail-modal__dialog" v-if="!!mailData" open>
                     <div class="btn-close" @click="closeMail">Close</div>
                     <div class="actions">
                         <button class="btn">Mark as read (r)</button>
